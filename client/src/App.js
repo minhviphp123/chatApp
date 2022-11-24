@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import { useState } from "react";
 import Chat from "./Chat";
 
-const socket = io.connect("http://localhost:3001");
+const socket = io.connect("http://localhost:3001");//connect to server
 
 function App() {
   const [username, setUsername] = useState("");
@@ -24,7 +24,7 @@ function App() {
           <h3>Join A Chat</h3>
           <input
             type="text"
-            placeholder="John..."
+            placeholder="Name..."
             onChange={(event) => {
               setUsername(event.target.value);
             }}
@@ -41,6 +41,9 @@ function App() {
       ) : (
         <Chat socket={socket} username={username} room={room} />
       )}
+
+      <a href="http://localhost:4000" target='_blank'>New User</a>
+
     </div>
   );
 }
