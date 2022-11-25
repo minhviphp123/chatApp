@@ -19,6 +19,7 @@ function App() {
 
   return (
     <div className="App">
+      {console.log(room)}
       {!showChat ? (
         <div className="joinChatContainer">
           <h3>Join A Chat</h3>
@@ -29,12 +30,17 @@ function App() {
               setUsername(event.target.value);
             }}
           />
+          <h2>Choose room</h2>
+          <div className="btns">
+            <button onClick={() => setRoom('Room1')} className='btn'>Room1</button>
+            <button onClick={() => setRoom('Room2')} className='btn'>Room2</button>
+            <button onClick={() => setRoom('Room3')} className='btn'>Room3</button>
+          </div>
           <input
             type="text"
             placeholder="Room ID..."
-            onChange={(event) => {
-              setRoom(event.target.value);
-            }}
+            value={room}
+            hidden
           />
           <button onClick={joinRoom}>Join A Room</button>
         </div>

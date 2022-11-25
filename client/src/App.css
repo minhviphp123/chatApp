@@ -175,6 +175,7 @@ body {
 
   outline: none;
   font-family: "Open Sans", sans-serif;
+  position: relative;
 }
 
 .chat-window .chat-footer button {
@@ -211,3 +212,76 @@ body {
 .span {
   color: rgb(122, 155, 122);
 }
+
+.btns {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  background-color: rgb(133, 60, 60) !important;
+  width: 50% !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+h2 {
+  margin: 6px auto !important;
+}
+
+.btn:focus {
+  background: rgb(68, 68, 142) !important;
+}
+
+
+.chat-footer {
+  position: relative !important;
+  /* width: fit-content; */
+  display: flex;
+  /* justify-content: center !important; */
+  align-items: center !important;
+}
+
+.previewImg {
+  position: absolute;
+  left: 70px;
+  width: 30%;
+  height: 90%;
+  background: center no-repeat;
+  background-size: contain;
+}
+
+label {
+  cursor: pointer;
+}
+
+
+.uploadIcon {
+  color: rgb(29, 55, 50);
+  cursor: pointer;
+  font-size: larger;
+  margin: auto 4px;
+}
+
+.leftMessImg {
+  width: 130px;
+  height: 130px;
+  display: block;
+  margin: 12px 4px;
+  justify-content: flex-start;
+}
+
+.rightMessImg {
+  width: 130px;
+  height: 130px;
+  display: block;
+  margin: 12px 4px;
+  justify-content: flex-end;
+}
+
+/* .message {
+  border: 1px solid;
+  position: relative;
+} */
